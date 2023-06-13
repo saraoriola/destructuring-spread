@@ -159,9 +159,9 @@
         // 3.6 // Escribe una función llamada onlyUniques que acepte cualquier número de argumentos y devuelva un array de elementos únicos, sin repetidos.
         function onlyUniques (...args){
            const uniqueArray = args
-           .filter((value, index) => {
+           .filter((value, index) => { //
             return args
-           .indexOf(value) === index;
+            .indexOf(value) === index; // para obtener el índice de la primera aparición de un elemento value en el array args
            });
            return uniqueArray;
         }
@@ -170,8 +170,14 @@
         console.log(onlyUniques(1, 1, 2, 2, 3, 6, 7, 8));  //[1, 2, 3, 6, 7, 8]
         
         // 3.7 // Escribe una función llamada combineAllArrays que pueda recibir cualquier cantidad de arrays como argumentos y los combine todos en un solo array.
-        combineAllArrays([3, 6, 7, 8],[2, 7, 3, 1]) // [3, 6, 7, 8, 2, 7, 3, 1]
-        combineAllArrays([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1]); // [2, 7, 3, 1, 2, 7, 4, 12, 2, 44, 22, 7, 3, 1]
+        function combineAllArrays(...arrays) {
+            const concatArray = [].concat(...arrays);
+            return concatArray;
+          }
+          
+          console.log(combineAllArrays([3, 6, 7, 8], [2, 7, 3, 1]));
+          console.log(combineAllArrays([2, 7, 3, 1], [2, 7, 4, 12], [2, 44, 22, 7, 3, 1]));
+          
 
         // 3.8 // Escribe una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
