@@ -181,4 +181,9 @@
 
         // 3.8 // Escribe una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
+        function sumAndSquare(...cualqArgs) {
+            const cualqArgs = numbers.map((num) => num ** 2);
+        }
 
+
+        const result = sumAndSquare(console.log(onlyUniques(1, 1, 2, 2, 3, 6, 7, 8)))
